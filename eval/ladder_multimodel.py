@@ -44,9 +44,9 @@ def plot(results: dict, path: str) -> str:
         colors = []
         for c in ORDER:
             if c == "neutral":
-                colors.append("#9CA3AF")          # grey: baseline
+                colors.append("#B0B0B0")          # light grey: baseline (matches incentive_ladder)
             elif c == "quota":
-                colors.append("#B3001B")          # red: the peer-benchmark headline
+                colors.append("#E45756")          # red: the incentivized/peer-benchmark condition (project convention)
             else:
                 colors.append("#6E6E6E")          # dark grey: blunt pressure
         x = np.arange(len(ORDER))

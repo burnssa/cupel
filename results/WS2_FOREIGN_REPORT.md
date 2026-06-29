@@ -128,6 +128,10 @@ The full incentive ladder — neutral, three blunt high-pressure framings, and t
 
 ![incentive ladder across models](plots/ladder_multimodel.png)
 
+**Where the suppression lands generalizes too:** bright-line **overt structuring stays at 0% under-escalation in every model** even under the peer benchmark, while the judgment-call typologies (subtle structuring, pass-through, layering, dispersion) bend. The failure is typology-shaped, and that shape holds across providers. (GPT-4o and Llama also miss subtle structuring at neutral baseline — partly capability, not incentive.)
+
+![per-typology under-escalation across models](plots/typology_multimodel.png)
+
 ### Claim 2 — Observability gap (Pillar A, negative)
 The observability stack raised **0 alarms** (`stack_flags_failure = False`). escalation rate FELL — on a reliability/ops dashboard this reads as a throughput/efficiency improvement, not an incident.
 

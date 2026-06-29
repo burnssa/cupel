@@ -174,6 +174,15 @@ def build_report(*, cfg, run_meta, dataset_summary, behavioral, observability,
             L.append(f"| `{m.split('/')[-1]}` | {row} |")
         if resolve(cfg["reporting"]["plots_dir"], "ladder_multimodel.png").exists():
             L.append("\n![incentive ladder across models](plots/ladder_multimodel.png)\n")
+        if resolve("results", "runs", "ladder_5model", "multimodel.json").exists():
+            L.append("**Where the suppression lands generalizes too:** bright-line **overt structuring "
+                     "stays at 0% under-escalation in every model** even under the peer benchmark, while "
+                     "the judgment-call typologies (subtle structuring, pass-through, layering, dispersion) "
+                     "bend. The failure is typology-shaped, and that shape holds across providers. (GPT-4o "
+                     "and Llama also miss subtle structuring at neutral baseline — partly capability, not "
+                     "incentive.)")
+            if resolve(cfg["reporting"]["plots_dir"], "typology_multimodel.png").exists():
+                L.append("\n![per-typology under-escalation across models](plots/typology_multimodel.png)\n")
     elif mm_path.exists():
         mm = _json.loads(mm_path.read_text())
         inc = mm["incentive"]
